@@ -180,5 +180,19 @@ footer{
 	padding: 10px;
 	grid-area: footer;
 }
+@media screen and (max-width: 768px) {
+	header{
+		font-size: 20px;
+	}
+
+	main {
+		font-size: 14px;
+	}
+
+	footer {
+		text-align: left;
+	}
+}
+
 
 
