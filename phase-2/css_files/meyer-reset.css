@@ -54,7 +54,7 @@ table {
 
 body{
 	font-family: Arial, sans-serif;
-	font-size: 20px;
+	font-size: 15px;
 	margin: 0;
 	padding: 0;
 }
@@ -75,6 +75,10 @@ header{
 header h1{
 	font-size: 24px;
 }
+nav{
+	margin-bottom: 15px;
+	padding: 20px;
+}
 nav ul{
 	list-style-type: none;
 	padding: 0;
@@ -86,12 +90,12 @@ nav > ul > li{
 }
 nav a{
 	display: block;
-	padding: 8px;
+	padding: 2px;
 	text-decoration: none;
 	color: #333333;
 }
 .grid-item{
-	padding: 20px;
+	padding: 10px;
 	text-align: center;
 	background-color: black;
 }
@@ -99,8 +103,8 @@ nav a{
 	grid-area: header;
 }
 main{
-	margin: 10px;
-	padding: 10px;
+	margin: 1px;
+	padding: 2px;
 }
 main > h1{
 	margin-bottom: 2px;
@@ -108,7 +112,6 @@ main > h1{
 	border: 10px;
 }
 .main-content{
-
 	grid-area: main;
 }
 .aside {
@@ -123,7 +126,7 @@ main > h1{
 
 	grid-template-areas:
         "header header header header"
-        ". main sidebar . "
+        " . main sidebar . "
         "footer footer footer footer";
 	outline: solid;
 	padding: 10px;
@@ -169,6 +172,7 @@ article{
 }
 .aside{
 	font-size: 14px;
+	margin-bottom: 2px;
 	background-color: #ffffff;
 	padding: 20px;
 	outline: 2px solid #333333;
@@ -197,7 +201,10 @@ footer{
 	header{
 		font-size: 20px;
 	}
-
+	/*Hiding the navigation and aside display in the mobile layout*/
+	nav, aside{
+		display: none;
+	}
 	main {
 		font-size: 14px;
 	}
