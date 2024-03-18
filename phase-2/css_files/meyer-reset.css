@@ -1,0 +1,184 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.2 | 20191019
+   License: none (public domain)
+*/
+/*
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+/*
+*[hidden] {
+    display: none;
+}
+body {
+	line-height: 1;
+}
+menu, ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} */
+
+body{
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+}
+#site-header {
+	background-color: #333333;
+	text-align: left;
+	outline: solid;
+}
+#site-header h1{
+	font-size: 24px;
+}
+header{
+	background-color: #666666;
+	color: #ffffff;
+	text-align: left;
+	padding: 10px;
+}
+header h1{
+	font-size: 24px;
+}
+nav ul{
+	list-style-type: none;
+	padding: 0;
+}
+nav > ul > li{
+	display: inline;
+	margin-right: 10px;
+}
+nav a{
+	text-decoration: none;
+	color:#fff;
+}
+.grid-item{
+	padding: 20px;
+	text-align: center;
+	background-color: black;
+}
+#site-header{
+	grid-area: header;
+}
+.main-content{
+	grid-area: main;
+}
+.aside {
+	grid-area: sidebar;
+}
+
+.grid-container{
+	display: grid; /*grid container*/
+	grid-template-columns: 5px 2fr 1fr 5px; /*two, then one to make aside occupy one, equal-width columns*/
+	grid-template-rows: auto auto auto; /*can use repeat*/
+	gap: 15px 10px;  /*Add a gap between grid items*/
+
+	grid-template-areas:
+        "header header header header"
+        ". main sidebar . "
+        "footer footer footer footer";
+	outline: solid;
+	padding: 10px;
+}
+.grid-item > div{
+	background-color: #ffffff;
+	text-align: center;
+}
+
+.main-content{
+	grid-area: main;
+	background-color: #000000;
+	padding: 10px;
+}
+article{
+	margin-bottom: 10px;
+}
+/*Articles of 4 are given a class each below*/
+.article-1{
+	background-color: #ffffff;
+	padding: 20px;
+	text-align: center;
+	outline: 2px solid black;
+
+}
+.article-2{
+	background-color: #ffffff;
+	padding: 20px;
+	text-align: center;
+	outline: 2px solid #666666;
+}
+.article-3{
+	background-color: #ffffff;
+	padding: 20px;
+	text-align: center;
+	outline: 2px solid #666666;
+}
+.article-4{
+	background-color: #ffffff;
+	padding: 20px;
+	text-align: center;
+	outline: 2px solid #666666;
+}
+.aside{
+	font-size: 14px;
+	background-color: #ffffff;
+	padding: 20px;
+	outline: 2px solid #333333;
+
+}
+section{
+	margin-top: 10px;
+
+}
+.item-a,
+.item-b,
+.item-c,
+.item-d {
+	text-align: center;
+	padding: 5px;
+	outline: solid 1px #333333;
+}
+footer{
+	background-color: #666666;
+	color: #ffffff;
+	text-align: center;
+	padding: 10px;
+	grid-area: footer;
+}
+
+
