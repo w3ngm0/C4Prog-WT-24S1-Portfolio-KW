@@ -201,7 +201,33 @@ footer{
 	main {
 		font-size: 14px;
 	}
-
+	.grid-container{
+		display: grid; /*grid container*/
+		grid-template-columns:2fr;
+		grid-template-rows: auto;
+		column-gap: 10px;
+		row-gap: 5px;
+		grid-template-areas:
+        "header"
+        "main"
+        "footer";
+		outline: solid;
+		padding: 10px;
+	}
+	.main-content{
+		max-width: 768px;
+		margin: 0;
+	}
+	.grid-item > header {
+		text-align: center;
+	}
+	.article-1{
+		border: 1px solid #666666;
+		color: #ffffff;
+		background-color: #333333;
+		margin-bottom: 10px;
+		padding: 10px;
+	}
 	footer {
 		text-align: left;
 	}
