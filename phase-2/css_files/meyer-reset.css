@@ -221,7 +221,10 @@ footer{
 	.grid-item > header {
 		text-align: center;
 	}
-	.article-1{
+	.article-1,
+	.article-2,
+	.article-3,
+	.article-4 {
 		border: 1px solid #666666;
 		color: #ffffff;
 		background-color: #333333;
