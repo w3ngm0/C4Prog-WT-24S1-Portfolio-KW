@@ -1,0 +1,47 @@
+Colours for Phase 3
+
+Colour: Fuchsia Blue
+Hex : #824ee9
+
+Shades: Dark blue 
+Hex: #2c1362
+
+Shades: Lavendar 
+Hex: #c3b7fb
+
+
+Colour: Amber 
+Hex: #ffbf00
+
+Shades: Light-Brown 
+Hex: #985008
+
+
+Shades: brown
+Hex: #7c420b
+
+
+Shades: Dark-brown
+Hex: #482200
+
+Shade: sunlight-yellow
+Hex: #ffed46
+
+
+Colour: Burnt Sienna 
+Hex: #e47d5e
+
+Shades: Light-burnt-sienna 
+Hex: #f5bdac
+
+
+Colour: Havelock Blue
+Hex: #4996df
+
+
+Shades: sky blue
+Hex: #9fd1f1
+
+Shades: lighter than blue 
+Hex: #dfeffa
+
