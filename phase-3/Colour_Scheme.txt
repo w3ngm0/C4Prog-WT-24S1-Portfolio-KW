@@ -12,7 +12,4 @@
 | Light Sienna| 245, 189, 172  | #F5BDAC  |
 |Havelock Blue|                | #4996DF  |
 | Sky Blue    |                | #9FD1F1  |
-| lighter Blue|                | #DFEFFA  |
-|          |                |          |
-|          |                |          |
-|          |                |          |
+| lighter Blue|  223, 239, 250 | #DFEFFA  |
