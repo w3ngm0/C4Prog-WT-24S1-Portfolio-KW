@@ -22,52 +22,67 @@ body{
     margin: 0;
     padding: 0;
 }
+
+button{
+    display: none;
+}
+
 #site-header {
     text-align: left;
     outline: solid;
 }
+
 #site-header h1{
     font-family: "Roboto Slab", serif;
     font-size: 24px;
 }
+
 header{
     background-color: #824EE9;
     color: #ffffff;
     text-align: left;
     padding: 10px;
 }
+
 header h1{
     font-family: "Roboto Slab", serif;
     font-size: 30px;
 }
+
 nav{
     font-size: 20px;
     margin-bottom: 15px;
     padding: 20px;
 }
+
 nav ul{
     list-style-type: none;
     padding: 0;
 }
+
 nav > ul > li{
     float: left;
     display: inline;
     margin-right: 10px;
 }
+
 nav a{
     display: block;
     padding: 2px;
     text-decoration: none;
     color: #333333;
 }
+
 .grid-item{
     padding: 10px;
     text-align: center;
     background-color: black;
 }
+
 #site-header{
     grid-area: header;
 }
+
 main{
     margin: 1px;
     padding: 2px;
@@ -78,6 +93,7 @@ main > h1{
     padding: 20px;
     border: 10px;
 }
+
 .main-content{
     grid-area: main;
 }
@@ -85,6 +101,7 @@ main > h1{
 .aside {
     grid-area: sidebar;
 }
+
 img {
     width: 250px;
     height: 200px;
@@ -94,6 +111,7 @@ img {
     width: 300px;
     height: 200px;
 }
+
 .grid-container{
     display: grid; /*grid container*/
     grid-template-columns: 5px 2fr 1fr 5px; /*two, then one to make aside occupy one, equal-width columns*/
@@ -108,6 +126,7 @@ img {
     padding: 10px;
     background-color: #F5BDAC;
 }
+
 .grid-item > div{
     background-color: #ffffff;
     text-align: center;
@@ -149,6 +168,7 @@ article{
     padding: 20px;
     text-align: center;
 }
+
 .aside{
     font-family: "Tilt Neon", sans-serif;
     font-size: 14px;
@@ -160,6 +180,7 @@ article{
     border-radius: 10px;
 
 }
+
 section{
     margin-top: 10px;
 
@@ -195,12 +216,13 @@ footer{
         font-size: 20px;
     }
     /*Hiding the navigation and aside display in the mobile layout*/
-    nav, aside{
+    nav{
         display: none;
     }
-    main {
-        font-size: 14px;
+    aside{
+        display: none;
     }
+
     .grid-container{
         display: grid; /*grid container*/
         grid-template-columns:2fr;
@@ -215,6 +237,7 @@ footer{
         padding: 10px;
     }
     .main-content{
+        font-size: 14px;
         max-width: 768px;
         margin: 0;
     }
