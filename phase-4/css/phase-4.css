@@ -1,0 +1,240 @@
+/*<uniquifier>: Use a unique and descriptive class name */
+
+.tilt-neon-uniquifier {
+                font-family: "Tilt Neon", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-variation-settings:
+                        "XROT" 0,
+                        "YROT" 0;
+            }
+/*<uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
+
+.roboto-slab-uniquifier {
+                  font-family: "Roboto Slab", serif;
+                  font-weight: normal;
+                  font-style: normal;
+              }
+body{
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+#site-header {
+    text-align: left;
+    outline: solid;
+}
+#site-header h1{
+    font-family: "Roboto Slab", serif;
+    font-size: 24px;
+}
+header{
+    background-color: #824EE9;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px;
+}
+header h1{
+    font-family: "Roboto Slab", serif;
+    font-size: 30px;
+}
+nav{
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+nav > ul > li{
+    float: left;
+    display: inline;
+    margin-right: 10px;
+}
+nav a{
+    display: block;
+    padding: 2px;
+    text-decoration: none;
+    color: #333333;
+}
+.grid-item{
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+}
+#site-header{
+    grid-area: header;
+}
+main{
+    margin: 1px;
+    padding: 2px;
+}
+main > h1{
+    font-family: "Tilt Neon", sans-serif;
+    margin-bottom: 2px;
+    padding: 20px;
+    border: 10px;
+}
+.main-content{
+    grid-area: main;
+}
+
+.aside {
+    grid-area: sidebar;
+}
+img {
+    width: 250px;
+    height: 200px;
+}
+
+.article-image{
+    width: 300px;
+    height: 200px;
+}
+.grid-container{
+    display: grid; /*grid container*/
+    grid-template-columns: 5px 2fr 1fr 5px; /*two, then one to make aside occupy one, equal-width columns*/
+    grid-template-rows: auto auto auto; /*can use repeat*/
+    gap: 15px 10px;  /*Add a gap between grid items*/
+
+    grid-template-areas:
+        "header header header header"
+        " . main sidebar . "
+        "footer footer footer footer";
+    outline: solid;
+    padding: 10px;
+    background-color: #F5BDAC;
+}
+.grid-item > div{
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.main-content{
+    background-color: #F5BDAC;
+    grid-area: main;
+    padding: 10px;
+}
+article{
+    margin-bottom: 10px;
+    outline: 2px snow;
+    border-radius: 10px;
+}
+/*Articles of 4 are given a class each below*/
+.article-1{
+    font-family: "Tilt Neon", sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+
+}
+.article-2{
+    font-family: "Tilt Neon", sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+.article-3{
+    font-family: "Tilt Neon", sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+.article-4{
+    font-family: "Tilt Neon", sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+.aside{
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 14px;
+    margin-top: 115px;
+    margin-bottom: 22px;
+    background-color: #ffffff;
+    padding: 20px;
+    outline: 2px solid snow;
+    border-radius: 10px;
+
+}
+section{
+    margin-top: 10px;
+
+}
+.item-a,
+.item-b,
+.item-c,
+.item-d {
+    text-align: center;
+    padding: 5px;
+    outline: solid 1px #333333;
+}
+footer{
+    background-color: #FFBF00;;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    grid-area: footer;
+}
+@media screen and (max-width: 768px) {
+    #hamburger{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 99;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    header{
+        font-size: 20px;
+    }
+    /*Hiding the navigation and aside display in the mobile layout*/
+    nav, aside{
+        display: none;
+    }
+    main {
+        font-size: 14px;
+    }
+    .grid-container{
+        display: grid; /*grid container*/
+        grid-template-columns:2fr;
+        grid-template-rows: auto;
+        column-gap: 10px;
+        row-gap: 5px;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        outline: solid;
+        padding: 10px;
+    }
+    .main-content{
+        max-width: 768px;
+        margin: 0;
+    }
+    .grid-item > header {
+        text-align: center;
+    }
+    .article-1,
+    .article-2,
+    .article-3,
+    .article-4 {
+        border: 1px solid ;
+        color: #000000;
+        background-color: #DFEFFA;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    footer {
+        text-align: left;
+    }
+}
+
+
+
