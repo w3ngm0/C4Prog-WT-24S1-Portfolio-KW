@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Basic-Layout</title>
-    <link rel="stylesheet" type="text/css" href="/C4Prog-WT-24S1-Portfolio-KW/phase-3/css/phase-3.css">
+    <link rel="stylesheet" type="text/css" href="css/phase-4.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Open+Sans:ital,wght@0,300;1,300&family=Tilt+Neon&display=swap" rel="stylesheet">
@@ -222,6 +222,28 @@
         </article>
     </main>
     <aside class="aside">
+        <section id="position-1" class="form-section">
+            <h1 id="heading">Ninja API App</h1>
+            <header>
+                Pick what you want to see from the following API's
+            </header>
+            <form id="ninja-api-form">
+                <label for="jokes">
+                    <input type="checkbox" id="jokes" name="apiRoute" value="jokes"/>
+                        Jokes
+                </label><br>
+                <label for="facts">
+                    <input type="checkbox" id="facts" name="apiRoute" value="facts"/>
+                        Facts
+                </label><br>
+                <label for="content-input">Content:</label>
+                <input type="text" id="content-input" name="content">
+                <button type="button" id="submit-button">Get Response</button>
+            </form>
+            <h2>Hope you like the results!</h2>
+            <p>......................</p>
+            <div id="response-area" class="response-area">If API Call is unsuccessful</div>
+        </section>
         <h2>Comic Corner</h2>
         <section class="item-a">
             <h3>HTML/CSS </h3>
