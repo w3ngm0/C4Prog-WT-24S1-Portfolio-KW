@@ -1,6 +1,9 @@
-/*<uniquifier>: Use a unique and descriptive class name */
+/*
+    The font variation settings are set to default values
+    Using a unique and descriptive class name for Tilt Neon font.
+*/
 
-.tilt-neon-uniquifier {
+.tilt-neon {
     font-family: "Tilt Neon", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -8,14 +11,21 @@
             "XROT" 0,
             "YROT" 0;
 }
-/*<uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900 */
+/*
+    Use a unique and descriptive class name for the Roboto Slab font.
+    Use a font weight value from 100 to 900.
+*/
 
-.roboto-slab-uniquifier {
+.roboto-slab {
     font-family: "Roboto Slab", serif;
     font-weight: normal;
     font-style: normal;
 }
+
+/*
+    Use Arial or a sans-serif font as a fallback for the body font.
+    Set the font size to 15px and reset margin and padding.
+*/
 body{
     font-family: Arial, sans-serif;
     font-size: 15px;
@@ -269,6 +279,7 @@ footer{
     padding: 10px;
     grid-area: footer;
 }
+
 @media screen and (max-width: 768px) {
     #hamburger{
         display: block;
