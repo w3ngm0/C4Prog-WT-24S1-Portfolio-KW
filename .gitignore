@@ -1,3 +1,9 @@
 .idea
 .idea/*
 .idea/**
+
+# Ignore evidence folders 
+evidence/ 
+evidence/*
+
+# Other entries 
