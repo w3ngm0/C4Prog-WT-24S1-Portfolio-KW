@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function(){
         const apiKey = 'FNJIAlsI046SeeOgdVAoEw==WUQ6BhhzBrHl1TGT';
         let apiUrl = '';
 
+
+        // Adding event listener - Handling user error or input errors
         if (jokesChecked){
             const limit = 3;
             apiUrl = `https://api.api-ninjas.com/v1/jokes?limit=${limit}`;
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
             document.getElementById('response-area').innerText = 'Please select an appropriate API route ... ';
             return;
         }
+
 
         document.getElementById('response-area').innerText = "Loading . . . please wait";
 
