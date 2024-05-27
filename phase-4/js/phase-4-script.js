@@ -23,6 +23,30 @@ document.addEventListener('DOMContentLoaded', function(){
 
         document.getElementById('response-area').innerText = "Loading . . . please wait";
 
+        //Fetching facts
+        fetch(apiUrl, {
+            headers: {'X-Api-key': apiKey},
+            method: 'GET'
+        })
+            .then(response => {
+                if (!response.ok)  {
+                    throw new Error(`API error: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(result => {
+                let output = '';
+                result.forEach(item => {
+                    if (item.fact) {
+                        output += `Fact: ${item.fact}\n`;
+                    } else if (item.joke) {
+                        output += `Joke: ${item.joke}\n`;
+                    }
+                });
+                document.getElementById('response-area').innerText = output;
+            });
+
+
     });
 
 });
