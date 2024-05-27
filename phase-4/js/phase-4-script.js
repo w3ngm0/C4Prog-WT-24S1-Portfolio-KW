@@ -44,8 +44,10 @@ document.addEventListener('DOMContentLoaded', function(){
                     }
                 });
                 document.getElementById('response-area').innerText = output;
-            });
-
+            })
+            .catch(error => {
+            document.getElementById('response-area').innerText = 'Error: ' + error.message;
+        });
 
     });
 
