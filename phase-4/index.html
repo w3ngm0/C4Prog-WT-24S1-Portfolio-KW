@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Open+Sans:ital,wght@0,300;1,300&family=Roboto+Slab:wght@100..900&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/phase-4-script.js"></script>
 </head>
 <body>
     <button id="hamburger">&#9776;</button>
@@ -227,20 +229,23 @@
             <header>
                 Pick what you want to see from the following API's
             </header>
+
             <form id="ninja-api-form">
                 <label for="jokes">
                     <input type="checkbox" id="jokes" name="apiRoute" value="jokes">
-                        Jokes
+                    Jokes
                 </label><br>
                 <label for="facts">
                     <input type="checkbox" id="facts" name="apiRoute" value="facts">
-                        Facts
+                    Facts
                 </label><br>
-                <label for="content-input">Content or amount of: </label>
+                <label for="content-input">Enter number of Jokes: </label>
                 <input type="text" id="content-input" name="content"><br>
 
                 <button type="button" id="submit-button">Get Response</button>
+                <button type="button" id="clear-button">Clear</button>
             </form>
+
             <h3>Hope you like the results!</h3>
             <div id="response-area" class="response-area"></div>
         </section>
@@ -283,7 +288,6 @@
         </section>
     </aside>
 </div>
-
 <footer>
     <p>@ Copyright 2024, Portfolio</p>
     <ul>
@@ -292,5 +296,6 @@
         <li>Help</li>
     </ul>
 </footer>
+
 </body>
 </html>
