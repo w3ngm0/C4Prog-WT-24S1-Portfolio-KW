@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "browserslist": "^4.23.0",
+    "caniuse-lite": "^1.0.30001629"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ]
+}

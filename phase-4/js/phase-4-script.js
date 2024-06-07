@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function(){
             document.getElementById('response-area').innerText = "Please enter a valid number";
             return;
         }
-        // Setting limit for number of J being returned
+        // Setting limit for number of Jokes being returned -> cannot retrieve for facts API only calls one fact at a time
         const limit = userInput;
 
         // Adding selected  API routes - Handling user error or input errors
