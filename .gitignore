@@ -7,3 +7,6 @@ evidence/
 evidence/*
 
 # Other entries 
+
+# Ignore phase-5 evidence folder
+phase-5/evidence
