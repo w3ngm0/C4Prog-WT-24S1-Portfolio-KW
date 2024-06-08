@@ -1,10 +1,13 @@
 {
   "devDependencies": {
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.4"
   },
   "dependencies": {
     "browserslist": "^4.23.0",
     "caniuse-lite": "^1.0.30001629"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
   "browserslist": [
     "> 0.5%",
