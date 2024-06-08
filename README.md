@@ -86,6 +86,20 @@ Phase 5 focuses on modern web development tool and practices:
 - Usage: Used for the main dashboard content area.
 - TailwindCSS Classes: `flex items-center justify-center h-screen`
 
+## Testing in Multiple Browsers
+
+For phase-5 of the project, I tested my dashboard and portfolio in the following browsers:
+
+- **Windows**
+  - Blink: Google Chrome
+  - Webkit: Otter Browser, MS Edge
+  - Gecko: Firefox
+
+- **MacOS**
+  - Blink: Brave
+  - Webkit: MS Edge
+
+
 # Colour-Scheme
 | Name        | RGB            | HEX      |
 |-------------|----------------|----------|
