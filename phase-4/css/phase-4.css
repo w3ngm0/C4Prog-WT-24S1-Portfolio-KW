@@ -224,22 +224,75 @@ input {
     padding: 5px;
     margin: 2px;
 }
-.form-section form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.form-section {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
 }
-.form-section button {
-    padding: 10px 5px;
-    width: 70%;
+
+.form-section h2 {
+    padding: 10px;
+    font-size: 18px;
+    margin: 20px;
+}
+
+.form-section label {
+    margin: 10px;
     font-size: 16px;
-    background-color: limegreen;
-    color: white;
-    border:none;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-top: 5px;
 }
+
+.form-section input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    margin: 10px;
+    font-size: 18px;
+}
+
+/* Style for the Submit button */
+#submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: limegreen; /* Color for Submit button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+/* Change background color of Submit button on hover */
+#submit-button:hover {
+    background-color: #218838; /* Darker shade for hover */
+}
+
+/* Style for the Clear button */
+#clear-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF6347; /* Color for Clear button (Tomato color) */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+/* Change background color of Clear button on hover */
+#clear-button:hover {
+    background-color: #d32f2f; /* Darker shade for hover */
+}
+
+/* Optional: Additional style for disabled state */
+#clear-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
 .response-area{
     max-height: 100%;
     margin-top: 20px;
