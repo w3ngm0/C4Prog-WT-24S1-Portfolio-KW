@@ -1,40 +1,39 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function() {
     const jokesCheckbox = document.getElementById('jokes');
     const factsCheckbox = document.getElementById('facts');
-    //Making sure only one checkbox is selected at a time
-    jokesCheckbox.addEventListener('change', function (){
+
+    // Ensuring only one checkbox is selected at a time
+    jokesCheckbox.addEventListener('change', function() {
         if (jokesCheckbox.checked) {
             factsCheckbox.checked = false;
         }
     });
-    factsCheckbox.addEventListener('change', function (){
-        if (factsCheckbox.checked){
+    factsCheckbox.addEventListener('change', function() {
+        if (factsCheckbox.checked) {
             jokesCheckbox.checked = false;
         }
     });
 
-    document.getElementById('submit-button').addEventListener('click', function (){
+    document.getElementById('submit-button').addEventListener('click', function() {
         document.getElementById('response-area').innerHTML = '';
 
-        // To get the selected API route
+        // Get the selected API route
         const jokesChecked = jokesCheckbox.checked;
         const factsChecked = factsCheckbox.checked;
-        const apiKey = 'FNJIAlsI046SeeOgdVAoEw==WUQ6BhhzBrHl1TGT';
+        const apiKey = 'BCyL0uAO76qhQnKJbUy2BfbKqXS1pCtVB7JrXTIj';
         let apiUrl = '';
 
-
-        // Input validation: Ensure only numbers are entered
+        // Input validation: Ensure only positive numbers are entered
         const userInput = document.getElementById('content-input').value;
-        if(!/^\d+$/.test(userInput)){
-            document.getElementById('response-area').innerText = "Please enter a valid number";
+        if (!/^\d+$/.test(userInput) || parseInt(userInput, 10) <= 0) {
+            document.getElementById('response-area').innerText = "Please enter a valid positive number";
             return;
         }
-        // Setting limit for number of Jokes being returned -> cannot retrieve for facts API only calls one fact at a time
-        const limit = userInput;
 
-        // Adding selected  API routes - Handling user error or input errors
-        if (jokesChecked){
-            apiUrl = `https://api.api-ninjas.com/v1/jokes?limit=${limit}`;
+        // Determine the API URL based on selected route
+        if (jokesChecked) {
+            // Use URL without the limit parameter
+            apiUrl = 'https://api.api-ninjas.com/v1/jokes';
         } else if (factsChecked) {
             apiUrl = 'https://api.api-ninjas.com/v1/facts';
         } else {
@@ -42,13 +41,11 @@ document.addEventListener('DOMContentLoaded', function(){
             return;
         }
 
-
         document.getElementById('response-area').innerText = "Loading . . . please wait";
 
-
-        //Fetching facts or jokes
+        // Fetching facts or jokes
         fetch(apiUrl, {
-            headers: {'X-Api-key': apiKey},
+            headers: {'X-Api-Key': apiKey},
             method: 'GET'
         })
             .then(response => {
@@ -59,27 +56,34 @@ document.addEventListener('DOMContentLoaded', function(){
             })
             .then(result => {
                 let output = '';
-                result.forEach(item => {
-                    if (item.fact) {
-                        output += `Fact: ${item.fact}\n`;
-                    } else if (item.joke) {
-                        output += `Joke: ${item.joke}\n`;
+                if (Array.isArray(result)) {
+                    result.forEach(item => {
+                        if (item.joke) {
+                            output += `Joke: ${item.joke}\n`;
+                        } else if (item.fact) {
+                            output += `Fact: ${item.fact}\n`;
+                        }
+                    });
+                } else { // Handling single joke or fact
+                    if (result.joke) {
+                        output += `Joke: ${result.joke}\n`;
+                    } else if (result.fact) {
+                        output += `Fact: ${result.fact}\n`;
                     }
-                });
-                document.getElementById('response-area').innerText = output;
+                }
+                document.getElementById('response-area').innerText = output || 'No results found';
             })
             .catch(error => {
-            document.getElementById('response-area').innerText = 'Error: ' + error.message;
+                document.getElementById('response-area').innerText = 'Error: ' + error.message;
             });
 
-        });
-        //Clear button implementation
-        document.getElementById('clear-button').addEventListener('click', function(){
-            document.getElementById('content-input').value= '';
-            document.getElementById('response-area').innerHTML= '';
-            document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
-            jokesCheckbox.checked = false;
-            factsCheckbox.checked = false;
-        });
+    });
 
+    // Clear button implementation
+    document.getElementById('clear-button').addEventListener('click', function() {
+        document.getElementById('content-input').value = '';
+        document.getElementById('response-area').innerHTML = '';
+        jokesCheckbox.checked = false;
+        factsCheckbox.checked = false;
+    });
 });
