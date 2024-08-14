@@ -227,25 +227,29 @@
         <section id="position-1" class="form-section">
             <h2 id="heading">Ninja API App</h2>
             <header>
-                Pick what you want to see from the following API's
+                Pick what you want to see from the following APIs
             </header>
-
             <form id="ninja-api-form">
+                <!-- Jokes Checkbox -->
                 <label for="jokes">
                     <input type="checkbox" id="jokes" name="apiRoute" value="jokes">
                     Jokes
                 </label><br>
+
+                <!-- Facts Checkbox -->
                 <label for="facts">
                     <input type="checkbox" id="facts" name="apiRoute" value="facts">
                     Facts
                 </label><br>
-                <label for="content-input">Enter number of Jokes: </label>
+
+                <!-- Number of Jokes Input -->
+                <label for="content-input">Enter number of Jokes:</label>
                 <input type="text" id="content-input" name="content"><br>
 
+                <!-- Submit and Clear Buttons -->
                 <button type="button" id="submit-button">Get Response</button>
                 <button type="button" id="clear-button">Clear</button>
             </form>
-
             <h3>Hope you like the results!</h3>
             <div id="response-area" class="response-area"></div>
         </section>
